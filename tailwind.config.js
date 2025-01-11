@@ -8,7 +8,11 @@ export default {
     darkMode: 'media',
     extend: {
       colors: {
-        // Add your custom colors here
+        lightbg: "#e8e8e3",
+        lighttxt: "#5b5e62",
+        darkbg: "#5b5e62",
+        darktxt: "#e8e8e3",
+        standout: "#33b289"
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

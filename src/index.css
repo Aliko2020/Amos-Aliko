@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+  padding: 4px 8px;
+  border: 2px solid #33b289;
+  font-weight: 600;
+  box-shadow: -1px 2px 0px 0px rgb(51, 178, 137);
+  -webkit-box-shadow: -1px 2px 0px 0px rgb(51, 178, 137);
+  -moz-box-shadow: -1px 2px 0px 0px rgb(51, 178, 137);
+}
+.links:hover {
+  color: #33b289;
+}
+
+.current-link {
+  position: relative;
+}
+
+.current-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the line */
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: #33b289; /* Adjust the color of the line */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.current-link:hover::after,
+.current-link:active::after {
+  transform: scaleX(1);
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    align-items: center;
+}
+.hero-text{
+  font-size: 24px;
+  font-weight: 600;
+}
+.bg{
+    opacity: 0.3; 
+}
