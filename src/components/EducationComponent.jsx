@@ -48,10 +48,10 @@ const education = [
   
         <h2 className="font-semibold">Professional Background</h2>
         {professionalEx.map((exp, index) => (
-          <div key={index} className="mb-4 flex gap-6">
-            <a className="sm:min-w-[160px]">
+          <div key={index} className="flex gap-6">
+            <h2 className="min-w-24 sm:min-w-40">
               {exp.timeFrame.from} - {exp.timeFrame.to}
-            </a>
+            </h2>
             <div>
               <a 
                 className="flex gap-1"

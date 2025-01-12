@@ -13,16 +13,16 @@ const HeadComponent = () => {
   };
 
   return (
-    <section className="flex flex-col gap-2">
+    <section className="flex flex-col gap-2 mt-10">
       <div className="">
-        <div className='flex gap-2 items-center'>
-          <div className="w-16 h-16 border border-gray-500 rounded-full p-0.5 overflow-hidden">
-            <img src={amos} alt="official photo" className="w-full h-full object-cover rounded-full"/>
+        <div className='flex flex-col gap-2 items-center'>
+          <div className="max-w-52 border border-gray-500 rounded-lg overflow-hidden">
+            <img src={amos} alt="official photo" className="w-full h-full object-cover"/>
           </div>
-          <div className=''>
-            <h2 className='font-semibold'>Amos Aliko</h2>
-            <p>Frontend Developer</p>
-            <p className='flex items-center'>
+          <div className='text-center'>
+            <h2 className='font-semibold text-center'>Amos Aliko</h2>
+            <p className='text-sm'>Frontend Developer</p>
+            <p className='flex text-sm'>
               alikoamosofficial@gmail.com
               <IoMdCopy onClick={copyToClipboard} className='cursor-pointer' />
               {copied && <span className="ml-2 text-sm text-green-500">Copied</span>}
