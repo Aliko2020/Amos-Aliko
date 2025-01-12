@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import amos from '../../public/images/amos.png';
+import amos from '../images.png';
 import { IoMdCopy } from "react-icons/io";
 
 const HeadComponent = () => {

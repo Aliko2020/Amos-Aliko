@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import workspace from "../../public/images/workspace.jpeg";
+import workspace from "../images/workspace.jpeg";
 import { BiSolidCoffeeAlt } from "react-icons/bi";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
