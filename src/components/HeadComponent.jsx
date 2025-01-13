@@ -1,5 +1,7 @@
-import amos from '../images.png';
+import { useState } from 'react';
+import amos from '../images/amos.png';
 import { IoMdCopy } from "react-icons/io";
+
 
 const HeadComponent = () => {
   const [copied, setCopied] = useState(false);
@@ -15,10 +17,10 @@ const HeadComponent = () => {
     <section className="flex flex-col gap-2 mt-10">
       <div className="">
         <div className='flex flex-col gap-2 items-center'>
-          <div className="max-w-52 border border-gray-500 rounded-lg overflow-hidden">
+          <div className="max-w-64 border border-gray-500 rounded-lg overflow-hidden">
             <img src={amos} alt="official photo" className="w-full h-full object-cover"/>
           </div>
-          <div className='text-center'>
+          {/* <div className='text-center'>
             <h2 className='font-semibold text-center'>Amos Aliko</h2>
             <p className='text-sm'>Frontend Developer</p>
             <p className='flex text-sm'>
@@ -26,7 +28,7 @@ const HeadComponent = () => {
               <IoMdCopy onClick={copyToClipboard} className='cursor-pointer' />
               {copied && <span className="ml-2 text-sm text-green-500">Copied</span>}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

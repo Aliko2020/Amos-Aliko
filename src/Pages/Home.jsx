@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import workspace from "../images/workspace.jpeg";
+import workspace from "../images/herologo.jpeg";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import assat from '../images/asat.png'
 import Typewriter from "../components/Typewritter";
 
 const Home = () => {
@@ -10,11 +11,11 @@ const Home = () => {
         <section className="hero flex-grow flex items-center">
           <div className="max-w-2xl leading-relaxed">
             <div>
-              <span className="text-3xl p-1">
+              <span className="text-3xl">
                 <Typewriter text="H i, " />
               </span>
               <br />
-              <h1 className="text-3xl p-1">
+              <h1 className="text-3xl">
                 <Typewriter text="I'm Amos, a Web Developer," />
               </h1>
               <p className="mt-2">
@@ -25,7 +26,7 @@ const Home = () => {
                 and learn from their experiences.
               </p>
               <button
-                className="btn-connect current-link"
+                className="btn btn-connect"
                 onClick={() =>
                   (window.location.href = "mailto:your-email@example.com")
                 }

@@ -53,6 +53,11 @@
 .bg{
     opacity: 0.3; 
 }
+.btn{
+  padding: 4px 8px;
+  background: #e36c4b;
+  border-radius: 4px;
+}
 
 .btn-connect {
   display: flex;
