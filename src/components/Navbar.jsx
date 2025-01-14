@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CiHome } from "react-icons/ci";
+import { GoHome } from "react-icons/go";
 import { CiUser } from "react-icons/ci";
 import { CiFolderOn } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
         <ul className="flex gap-8 font-semibold">
           <Link className="links current-link" to="/">
-            <CiHome size={24} />
+            <GoHome size={24} />
           </Link>
           <Link className="links current-link" to="/about">
             <CiUser size={24} />

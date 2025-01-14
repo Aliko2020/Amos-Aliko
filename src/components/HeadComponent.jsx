@@ -1,34 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import amos from '../images/amos.png';
-import { IoMdCopy } from "react-icons/io";
-
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const HeadComponent = () => {
-  const [copied, setCopied] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("alikoamosofficial@gmail.com").then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Hide "Copied" after 2 seconds
-    });
-  };
+  useEffect(() => {
+    const img = new Image();
+    img.src = amos;
+    img.onload = () => setLoading(false);
+  }, []);
 
   return (
     <section className="flex flex-col gap-2 mt-10">
       <div className="">
-        <div className='flex flex-col gap-2 items-center'>
-          <div className="max-w-64 border border-gray-500 rounded-lg overflow-hidden">
-            <img src={amos} alt="official photo" className="w-full h-full object-cover"/>
+        <div className='flex flex-col gap-2 items-center lg:fixed top-18 left-20'> 
+          <div className="max-w-64 border border-gray-500 bg-darkbg rounded-lg overflow-hidden animated-moveLeft">
+            {loading ? (
+              <Skeleton height={256} width={318} baseColor="#5b5e62" highlightColor="#c0c0c0" />
+            ) : (
+              <img src={amos} alt="official photo" className="w-full h-full object-cover"/>
+            )}
           </div>
-          {/* <div className='text-center'>
-            <h2 className='font-semibold text-center'>Amos Aliko</h2>
-            <p className='text-sm'>Frontend Developer</p>
-            <p className='flex text-sm'>
-              alikoamosofficial@gmail.com
-              <IoMdCopy onClick={copyToClipboard} className='cursor-pointer' />
-              {copied && <span className="ml-2 text-sm text-green-500">Copied</span>}
-            </p>
-          </div> */}
         </div>
       </div>
     </section>
