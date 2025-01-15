@@ -5,6 +5,11 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Typewriter from "../components/Typewritter";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Contact from "../components/Contact";
+import About from "./About";
+import Projects from "./Projects";
+import wave from "../images/wave-hello.gif";
+import scrolldown from "../images/Animation.gif";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -15,38 +20,53 @@ const Home = () => {
     img.onload = () => setLoading(false);
   }, []);
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <main className="flex flex-col p-4">
       {/* hero text and image start */}
-      <section className="hero flex-grow flex items-center">
+      <section className="hero flex items-center">
         <div className="max-w-2xl leading-relaxed">
-          <div>
-            <span className="text-3xl">
-              <Typewriter text="H i, " />
-            </span>
-            <br />
-            <h1 className="text-3xl">
-              <Typewriter text="I'm Amos, a Web Developer," />
+          <div className="text-center sm:text-start mt-20">
+            <div className="flex justify-center sm:justify-start">
+              <h1 className="flex items-center text-4xl">Hello</h1>
+              <img src={wave} className="w-10 opacity-50" alt="wave gif" />
+            </div>
+            <h1 className="text-5xl">
+              I'm Amos, <br className="sm:hidden" />
+              <span className="text-lg sm:text-5xl">Web Developer</span>,
             </h1>
             <p className="mt-2">
-              With over two years of experience and a strong foundation in
-              computer science. I'm passionate about finding creative solutions
-              to challenges and sharing them with the world through the
-              internet. I'm always eager to connect with other developers and
-              learn from their experiences.
+              With over two years of frontend development experience and a
+              strong foundation in computer science.
             </p>
-            <button
-              className="btn btn-connect"
-              onClick={() => (window.location.href = "mailto:your-email@example.com")}
-              aria-label="connect"
-            >
-              Let's Connect
-            </button>
+            <div className="flex justify-center sm:justify-start">
+              <Contact />
+            </div>
+            <div className="flex justify-center mt-8">
+              <button onClick={scrollToBottom} aria-label="Scroll down">
+                <img
+                  src={scrolldown}
+                  alt="Scroll down"
+                  className="w-10 opacity-50"
+                />
+              </button>
+            </div>
           </div>
         </div>
         <div className="hidden lg:block">
           {loading ? (
-            <Skeleton height={550} width={555} baseColor="#e36c4b" highlightColor="#c0c0c0" />
+            <Skeleton
+              height={550}
+              width={555}
+              baseColor="#e36c4b"
+              highlightColor="#c0c0c0"
+            />
           ) : (
             <img
               src={workspace}
@@ -57,32 +77,8 @@ const Home = () => {
         </div>
       </section>
       {/* hero text and image end */}
-      {/* footer starts here */}
-      <section className="flex justify-between items-center gap-8">
-        <div className="flex gap-4">
-          <a
-            href="https://www.linkedin.com/in/aliko-amos-0a7098246/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex border-r-2 border-standout pr-4 links"
-            aria-label="Visit my LinkedIn profile"
-          >
-            LinkedIn <FaExternalLinkAlt size={10} />
-          </a>
-          <a
-            href="https://github.com/Aliko2020"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex links"
-            aria-label="Visit my GitHub profile"
-          >
-            GitHub <FaExternalLinkAlt size={10} />
-          </a>
-        </div>
-        <Link className="links" to="/" aria-label="Hire me">
-          Resume
-        </Link>
-      </section>
+      <About />
+      <Projects />
     </main>
   );
 };

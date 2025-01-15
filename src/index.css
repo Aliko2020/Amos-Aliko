@@ -43,7 +43,7 @@ body{
 
 .hero{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 85vh;
     align-items: center;
     animation-name: moveLeft;
@@ -70,7 +70,7 @@ body{
   display: flex;
   align-items: center;
   margin-top: 0.25rem; 
-  padding: 0.25rem; 
+  padding: 8px 16px; 
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -95,22 +95,20 @@ body{
     transform: translate(0)
   }
 }
-
-.animated-gradient {
-  background: linear-gradient(90deg, #5b5e62, #343539,#7c7f83);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+.skills{
+  animation-name: moveRight;
+  animation-duration: 1s;
 }
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
+@keyframes moveRight{
+  0%{
+    opacity: 0;
+    transform: translateX(20px)
   }
-  50% {
-    background-position: 100% 50%;
+  80%{
+    transform: translateX(5px)
   }
-  100% {
-    background-position: 0% 50%;
+  100%{
+    opacity: 1;
+    transform: translate(0)
   }
 }
-

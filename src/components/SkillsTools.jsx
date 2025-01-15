@@ -1,13 +1,15 @@
 import javascript from '../images/javascript.svg';
 import html from '../images/html.svg';
 import postgresql from '../images/postgresql.svg';
+import css from '../images/CSS3.svg'
 import redux from '../images/redux.svg';
-import tailwind from '../images/tailwind-css.svg';
+import tailwind from '../images/tailwindcss.svg';
 import node from '../images/node-js.svg';
 import sql from '../images/sql.svg';
 import mongodb from '../images/mongodb.svg';
 import react from '../images/react.svg';
 import git from '../images/git.svg';
+import python from '../images/python.svg'
 
 const skills = [
   {
@@ -17,12 +19,22 @@ const skills = [
   },
   {
     name: "CSS3",
-    image: tailwind, // Assuming this represents CSS
+    image: css, 
     bgColor: "#5B6262",
   },
   {
-    name: "JavaScript ES6",
+    name: "TailwindCss",
+    image: tailwind, 
+    bgColor: "#5B6262",
+  },
+  {
+    name: "JS ES6",
     image: javascript,
+    bgColor: "#5B6262",
+  },
+  {
+    name: "Python",
+    image: python,
     bgColor: "#5B6262",
   },
   {
@@ -64,11 +76,11 @@ const skills = [
 
 const SkillsTools = () => {
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-darkbg rounded-lg">
+    <section className="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:pl-6 mt-4 lg:mt-1 bg-lightbg dark:bg-darkbg rounded-lg skills">
       {skills.map((skill, index) => (
-        <div key={index} className="flex flex-col items-center p-4 rounded-lg mt-4 shadow-lg" style={{ backgroundColor: skill.bgColor }}>
-          <img src={skill.image} alt={skill.name} className="w-12 h-12 mb-2" />
-          <h3>{skill.name}</h3>
+        <div key={index} className="flex flex-col justify-center border border-lighttxt border-opacity-20 bg-[#f9f0e9] dark:border-opacity-50 dark:bg-darkbgc p-2 items-center rounded-lg mt-4 hover:border hover:border-gray-200 dark:hover:border-gray-400">
+          <img src={skill.image} alt={skill.name} className="w-6 h-6 mb-2" />
+          <h3 className=''>{skill.name}</h3>
         </div>
       ))}
     </section>

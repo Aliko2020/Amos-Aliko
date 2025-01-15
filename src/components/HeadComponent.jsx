@@ -15,8 +15,8 @@ const HeadComponent = () => {
   return (
     <section className="flex flex-col gap-2 mt-10">
       <div className="">
-        <div className='flex flex-col gap-2 items-center lg:fixed top-18 left-20'> 
-          <div className="max-w-64 border border-gray-500 bg-darkbg rounded-lg overflow-hidden animated-moveLeft">
+        <div className='flex flex-col gap-2 items-center'> 
+          <div className="max-w-64 dark:opacity-60 border border-lighttxt border-opacity-20 dark:border-lightbg dark:border-opacity-50 rounded-lg overflow-hidden animated-moveLeft">
             {loading ? (
               <Skeleton height={256} width={318} baseColor="#5b5e62" highlightColor="#c0c0c0" />
             ) : (

@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', 
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    darkMode: 'media',
     extend: {
       colors: {
-        lightbg: "#e8e8e3",
-        lighttxt: "#5b5e62",
-        darkbg: "#5b5e62",
-        darktxt: "#e8e8e3",
+        lightbg: "#faede0",
+        lighttxt: "#1a3e5c",
+        darkbg: "#121212",
+        darkbgc: "#1f1f1f",
+        darktxt: "#faede0",
         standout: "#e36c4b"
       },
       fontFamily: {

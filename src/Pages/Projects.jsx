@@ -1,7 +1,11 @@
+import Project from "../components/Project"
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div className="flex flex-col gap-4 mt-12 p-4 m-auto">
+      <h1 className="text-xl font-semibold text-center mb-2 sm:hidden">Projects</h1>
+      <Project />
+    </div>
   )
 }
 
