@@ -44,7 +44,6 @@ const Nav = ()=>{
     )
 }
 
-
 const Project = () => {
   return (
     <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-4 dark:text-lightbg dark:text-opacity-50">
@@ -53,9 +52,9 @@ const Project = () => {
           <Nav />
           <h2 className="text-lg font-simibold mb-2 mt-4">{project.name}</h2>
           <p className="mb-4">{project.discription}</p>
-          <div className="flex gap-2 flex-wrap  items-center mb-4">
+          <div className="flex flex-wrap  items-center mb-4">
             {project.tools.map((tool, index) => (
-              <span key={index} className="bg-lighttxt text-lightbg dark:text-opacity-50 dark:bg-darkbgc  text-sm font-medium mr-2 px-2.5 py-0.5 rounded">{tool}</span>
+              <span key={index} className="dark:text-opacity-50 dark:bg-darkbgc  text-sm font-medium mr-2 px-2.5 py-0.5 rounded">{tool}</span>
             ))}
           </div>
           <div className="flex items-center border-t border-darkbgc pt-2">

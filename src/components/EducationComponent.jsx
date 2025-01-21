@@ -16,7 +16,7 @@ const education = [
     },
   },
 ];
-const EducationComponent = ({DotComponent}) => {
+const EducationComponent = () => {
   return (
     <section className="flex flex-col">
         <section className="flex gap-2 items-center">

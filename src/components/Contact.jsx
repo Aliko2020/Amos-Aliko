@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="mt-2 py-2 rounded-md opacity-80 mb-8">
       <h2 className="font-semibold mb-4 ">Let's get in touch.</h2>
-      <div className="bg-[#f9f0e9] dark:bg-darkbgc p-4 rounded-lg flex items-center gap-4">
+      <div className="bg-lightbg dark:bg-darkbgc p-2 rounded-lg flex items-center gap-4">
         <Link to="/" className="links"><FaGithub size={26}/></Link>
         <Link to="/" className="links"><FaLinkedin size={26} /></Link>
         <Link to="/" className="links"><FaTwitter size={26} /></Link>
