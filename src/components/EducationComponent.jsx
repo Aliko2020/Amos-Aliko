@@ -21,7 +21,7 @@ const EducationComponent = () => {
     <section className="flex flex-col">
         <section className="flex gap-2 items-center">
           
-          <h2 className="font-semibold text-center lg:text-start opacity-90">Education</h2>
+          <h2 className="font-simibold text-2xl lg:text-start opacity-90">Education</h2>
         </section>
       {education.map((edu, index) => (
         <div key={index} className="mb-4 flex lg:gap-16 mt-4">

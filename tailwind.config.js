@@ -13,7 +13,9 @@ export default {
         darkbg: "#121212",
         darkbgc: "#1f1f1f",
         darktxt: "#faede0",
-        standout: "#e36c4b"
+        standout: "#e36c4b",
+        trying: "#897736",
+        lightbck: "#2996f6"
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

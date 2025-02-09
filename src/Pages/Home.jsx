@@ -12,7 +12,6 @@ const Home = () => {
       <Hero />
       {/* hero text and image end */}
       <About />
-      <Projects />
     </main>
   );
 };
