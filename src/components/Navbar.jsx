@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { GoHome } from "react-icons/go";
-import { CiUser } from "react-icons/ci";
-import { CiFolderOn } from "react-icons/ci";
+import { CiUser, CiFolderOn, CiLight, CiDark } from "react-icons/ci";
 import { useState, useEffect } from "react";
-import { CiDark } from "react-icons/ci";
-import { CiLight } from "react-icons/ci";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(
@@ -20,8 +17,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex justify-center  lg:justify-end items-center pt-2 lg:pt-8 px-4 mb-2 mt-6 lg:mt-2">
-      <nav className="p-2 rounded-lg shadow-md border border-white fixed dark:bg-darkbgc dark:text-white dark:text-opacity-50 dark:border-opacity-50">
+    <header className="flex justify-center lg:justify-end items-center pt-2 lg:pt-8 px-4 mb-2  lg:mt-2">
+      <nav className="p-2 rounded-lg shadow-md border mt-8 border-white fixed dark:bg-darkbgc dark:text-white dark:text-opacity-50 dark:border-opacity-50">
         <ul className="flex gap-8 font-semibold">
           <Link className="links current-link" to="/">
             <GoHome size={24} />
@@ -32,11 +29,11 @@ const Navbar = () => {
           <Link className="links current-link" to="/projects">
             <CiFolderOn size={25} />
           </Link>
-          <button 
-            onClick={toggleDarkMode} 
+          <button
+            onClick={toggleDarkMode}
             className="dark:text-white rounded dark:opacity-50 links"
           >
-            {darkMode ? <CiLight size={25} /> : <CiDark size={25}/>}
+            {darkMode ? <CiLight size={25} /> : <CiDark size={25} />}
           </button>
         </ul>
       </nav>

@@ -1,5 +1,5 @@
 import EducationComponent from "../components/EducationComponent";
-import HeadComponent from "../components/headComponent";
+import HeadComponent from "../components/HeadComponent";
 import SkillsTools from "../components/SkillsTools";
 import Contact from "../components/Contact";
 

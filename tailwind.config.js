@@ -15,7 +15,8 @@ export default {
         darktxt: "#faede0",
         standout: "#e36c4b",
         trying: "#897736",
-        lightbck: "#2996f6"
+        lightbck: "#15bc52"
+        
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

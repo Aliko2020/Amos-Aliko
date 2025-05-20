@@ -32,22 +32,6 @@ const projects = [
     tools: ["React", "Tailwindcss","LocalStorage"],
     repo: "https://github.com/Aliko2020/Todo-App",
     live: "https://todo-app-46u2.onrender.com/"
-  },
-  {
-    name: "Todo App",
-    discription: "A todo app created with react to practice useContext with useReducer",
-    image: "",
-    tools: ["React", "Tailwindcss","LocalStorage"],
-    repo: "https://github.com/Aliko2020/Todo-App",
-    live: "https://todo-app-46u2.onrender.com/"
-  },
-  {
-    name: "Todo App",
-    discription: "A todo app created with react to practice useContext with useReducer",
-    image: "",
-    tools: ["React", "Tailwindcss","LocalStorage"],
-    repo: "https://github.com/Aliko2020/Todo-App",
-    live: "https://todo-app-46u2.onrender.com/"
   }
 ];
 const Nav = ()=>{
@@ -62,15 +46,15 @@ const Nav = ()=>{
 
 const Project = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-4 dark:text-lightbg dark:text-opacity-50 mt-8">
+    <div className="h-[100vh] flex flex-wrap  sm:flex-row justify-center items-center gap-4 dark:text-lightbg dark:text-opacity-50">
       {projects.map((project, index) => (
-        <div key={index} className="shadow-sm rounded-lg mr-4 p-2 mb-6 w-full sm:max-w-sm border-none">
+        <div key={index} className="shadow-sm rounded-lg p-4 w-full sm:max-w-sm border">
           <Nav />
-          <h2 className="text-lg font-simibold mb-2 mt-4">{project.name}</h2>
+          <h2 className="text-lg font-simibold">{project.name}</h2>
           <p className="mb-4">{project.discription}</p>
           <div className="flex flex-wrap  items-center mb-4">
             {project.tools.map((tool, index) => (
-              <span key={index} className="dark:text-opacity-50 dark:bg-darkbgc  text-sm font-medium mr-2 px-2.5 py-0.5 rounded">{tool}</span>
+              <span key={index} className="dark:text-opacity-50 dark:bg-darkbgc text-sm font-medium mr-2 px-2.5 py-0.5 rounded">{tool}</span>
             ))}
           </div>
           <div className="flex items-center pt-2">

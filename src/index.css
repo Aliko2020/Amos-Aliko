@@ -3,17 +3,31 @@
 @tailwind utilities;
 
 
-body{
+
+body {
   line-height: 30px;
+  background-image: url('./images/plain.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh; 
 }
+
+.dark body {
+  background-image: url('./images/plainw.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.35); 
+}
+
+
 .aliko {
   padding: 4px 8px;
   font-weight: 600;
   box-shadow: 0 2px 0px 0px #e36c4b;
 }
-.links{
-  
-}
+
 .links:hover {
   transform: translateY(-2px);
   color: #e36c4b;
@@ -45,7 +59,7 @@ body{
 .hero{
     display: flex;
     justify-content: space-around;
-    height: 85vh;
+    height: 100vh;
     align-items: center;
     animation-name: moveLeft;
     animation-duration: 1s;
