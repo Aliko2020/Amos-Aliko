@@ -19,7 +19,7 @@ export default {
         
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        lora: ['Lora', 'serif'],
       },
     },
   },

@@ -17,17 +17,20 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex justify-center lg:justify-end items-center pt-2 lg:pt-8 px-4 mb-2  lg:mt-2">
-      <nav className="p-2 rounded-lg shadow-md border mt-8 border-white fixed dark:bg-darkbgc dark:text-white dark:text-opacity-50 dark:border-opacity-50">
-        <ul className="flex gap-8 font-semibold">
-          <Link className="links current-link" to="/">
-            <GoHome size={24} />
+    <header className="flex justify-center lg:justify-end">
+      <nav className="p-2 rounded-lg shadow-md mt-8 fixed dark:bg-darkbg dark:text-white dark:text-opacity-50">
+        <ul className="flex gap-4 font-semibold">
+          <Link className="flex gap-1 items-center links current-link" to="/">
+            <GoHome size={24} /> <span className="hidden sm:flex">Home</span>
           </Link>
-          <Link className="links current-link" to="/about">
-            <CiUser size={24} />
+          <Link className="flex gap-1 items-center links current-link" to="/about">
+            <CiUser size={24} /> <span className="hidden sm:flex">About</span>
           </Link>
-          <Link className="links current-link" to="/projects">
-            <CiFolderOn size={25} />
+          <Link className="flex gap-1 items-center links current-link" to="/projects">
+            <CiFolderOn size={25} /> <span className="hidden sm:flex">Projects</span>
+          </Link>
+          <Link className="hidden sm:flex gap-1 items-center links current-link" to="/projects">
+            <CiFolderOn size={25} /> <span className="">CV</span>
           </Link>
           <button
             onClick={toggleDarkMode}
